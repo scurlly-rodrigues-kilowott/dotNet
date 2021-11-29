@@ -9,9 +9,11 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            int fahrenheit = 94;
-            decimal celsius = (fahrenheit - 32) * (5m / 9m);
-            Console.WriteLine("The temperature is " + celsius + " Celsius.");
+            int firstValue = 500;
+            int secondValue = 600;
+            int largerValue = Math.Max(firstValue, secondValue);
+
+            Console.WriteLine("The larger value is " +largerValue);
         }
     }
 }
