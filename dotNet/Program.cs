@@ -9,16 +9,30 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            string[] orderIDs = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
+            //purpose of this code is to reverse a string and count the number of times a particular character appears.
 
-            foreach (string orderID in orderIDs)
+
+            string str = "The quick brown fox jumps over the lazy dog.";
+
+            int x = 0;
+
+            char[] charMessage = str.ToCharArray();
+
+            Array.Reverse(charMessage);
+
+            foreach (char i in charMessage)
             {
-                if (orderID.StartsWith("B"))
+                if (i == 'o')
                 {
-                    Console.WriteLine(orderID);
+                    x++;
                 }
             }
 
+            string new_message = new String(charMessage);
+
+            Console.WriteLine(new_message);
+
+            Console.WriteLine($"'o' appears {x} times.");
         }
     }
 }
